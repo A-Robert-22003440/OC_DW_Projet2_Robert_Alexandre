@@ -1,0 +1,551 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 50px;
+}
+
+.site-header .logo img {
+  width: 61px;
+  height: 19px;
+  display: block;
+  object-fit: contain;
+}
+
+.navbar {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px 0;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  color: #0065FC;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #0065FC;
+  transform: scaleX(0);
+}
+
+.site-title {
+  padding: 0 50px;
+}
+
+.search-section {
+  margin: 35px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;  
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-icon {
+  background-color: #f2f2f2;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.search-form input {
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  outline: none;
+  width: 250px;
+}
+
+.search-btn {
+  background-color: #0065FC;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Bloc filtres */
+.filters {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding-left: 50px;
+}
+
+.filters-title {
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.filters-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filters-list button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 2px solid #d9d9d9;
+  border-radius: 30px;
+  background: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filters-list i {
+  color: #0065FC;
+  font-size: 16px;
+}
+
+.filters-list button:hover {
+  background-color: #DEEBFF;
+}
+
+.info-logements {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 0 50px;
+  font-size: 14px;
+  color: #333;
+}
+
+.info-logements i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  color: #0065FC;
+  font-size: 12px;
+}
+
+/* Cartes */
+.main-container {
+  display: flex;
+  gap: 40px;
+  margin: 35px 50px;
+  justify-content: space-around;
+}
+
+.hebergements {
+  background: #f2f2f2;
+  border-radius: 15px;
+  padding: 30px 50px;
+  flex: 2;
+}
+
+.hebergements h2 {
+  margin: 0 0 30px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.hebergements .card {
+  flex: 1 1 268px;
+  height: 207.25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.hebergements .card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border: 5px solid white;
+  border-radius: 15px;
+}
+
+.card-content {
+  padding: 0 10px;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.stars {
+  color: #0065FC;
+  font-size: 14px;
+}
+
+.show-more {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.show-more:hover {
+  color: #0065FC;
+}
+
+.populaires {
+  background: #f2f2f2;
+  border-radius: 15px;
+  padding: 30px;
+  flex: 1;
+}
+
+.populaires h2 {
+  margin: 0 0 30px;
+}
+
+.pop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pop-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.populaires .card {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border: 5px solid white;
+}
+
+.populaires .card img {
+  width: 40%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.populaires .card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-container .populaires .pop-cards .card-content .text {
+  padding: 0 0 15% 0;
+}
+
+.main-container .populaires .pop-cards .card-content .stars i {
+  font-size: 12px;
+}
+
+.populaires i {
+  color: #0065FC;
+  font-size: 16px;
+}
+
+.pop-header i {
+  margin: 0 0 25px;
+}
+
+.activites {
+  margin: 50px 50px;
+}
+
+.activites h2 {
+  margin-bottom: 20px;
+}
+
+.activites-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.activites .card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 439px;
+  width: 297.5px;
+}
+
+.activites .card img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.activites .card h3 {
+  margin: 0;
+  padding: 1rem 0 0 10%;
+  font-size: 100%;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 0 50px;
+  margin: 50px 50px 0px 50px;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Desktop*/
+@media (min-width: 1024px) {
+  html {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links li a::after {
+    top: 0;
+  }
+
+  .nav-links li a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .search-btn .btn-icon {
+  display: none;
+  }
+}
+
+/* Tablette*/
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .main-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .search-btn .btn-icon {
+  display: none;
+  }
+
+}
+
+
+/* Mobile*/
+@media (max-width: 767px) {
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 0 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .nav-links li a::after {
+    bottom: 0;
+  }
+
+  .nav-links li a:hover::after {
+    transform: scaleX(1);
+  }
+  .search-form input {
+    width: 100%;
+  }
+
+  .search-btn .btn-text {
+    display: none;
+  }
+
+  .search-btn .btn-icon {
+    display: inline;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .filters-list{
+    flex-wrap: wrap;
+  }
+
+  .main-container {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 35px 0px;
+  }
+
+  .footer {
+    flex-direction: column;
+    margin: 50px 0 0 0;
+  }
+
+  .activites .card {
+    width: 315px;
+    height: 200px;
+  }
+  .activites .card img {
+  height: 75%;
+  }
+
+  .nav-links li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px 0;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  }
+
+ .nav-links li {
+  width: 50%;
+  }
+
+  .activites {
+    margin: 50px 30px;
+  }
+
+  .hebergements {
+    background: 0; 
+    border-radius: 0;
+    padding: 0 20px;
+  }
+
+  .info-logements {
+    margin: 20px 0 0 20px;
+  }
+
+  .filters {
+    padding: 0 20px;
+  }
+
+  .search-section {
+    margin: 35px 20px;  
+  }
+
+  .site-title {
+    padding: 0 20px;
+  }
+
+  .search-btn {
+    padding: 15px 15px;
+    border-radius: 10px;
+  }
+
+  .filters-list button {
+    width: 162.5px;
+    height: 50px;
+  }
+
+  .filters-list {
+    gap: 10px;
+  }
+
+  .site-header {
+    justify-content: center;
+  }
+
+}
